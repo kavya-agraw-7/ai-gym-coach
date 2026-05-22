@@ -16,7 +16,6 @@ from services.coaching.llm import LLMCoach
 from services.coaching.tts import TextToSpeech
 from services.coaching.voice_pipeline import VoicePipeline, autoplay_audio
 
-  
 def main():
     st.set_page_config(
         page_icon="🏋️‍♀️",
@@ -63,9 +62,7 @@ def main():
 
         if not workout_started:
             plan_exercise = st.selectbox("Exercise", options=EXERCISE_OPTIONS, key="plan_exercise")
-
             plan_sets = st.number_input("Sets", min_value=0, max_value=50, key="plan_sets", step=1)
-
             plan_reps = st.number_input("Reps per Set", min_value=0, max_value=50, key="plan_reps", step=1)
 
             st.markdown("")
@@ -251,7 +248,5 @@ def main():
         else:
             st.info("No workout history found.")
 
-
 if __name__ == "__main__":
     main()
-    
