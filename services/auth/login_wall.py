@@ -1,7 +1,6 @@
 import streamlit as st
 from services.persistence.exercise_repository import get_or_create_user
 
-
 def render_login_wall():
     if st.session_state.get("user_id") is not None:
         return True
